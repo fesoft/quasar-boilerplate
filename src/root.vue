@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
   import { mapGetters, mapActions } from 'vuex'
-  import { Events, dom } from 'quasar-framework'
+  import { dom } from 'quasar-framework'
 
   export default {
     name: 'app-root',

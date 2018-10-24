@@ -4,6 +4,7 @@ import { route } from 'genesis/infra/router/resources'
 import user from 'src/domains/admin/user/routes'
 import permission from 'src/domains/admin/permission/routes'
 import organization from 'src/domains/admin/organization/routes'
+import empresa from 'src/domains/admin/empresa/routes'
 
 export const adminPath = '/dashboard/admin'
 export const adminName = 'admin.index'
@@ -16,6 +17,7 @@ export const routes = [
   route(adminPath, adminName, adminComponent, {}, adminMeta, [
     ...user,
     ...permission,
-    ...organization
+    ...organization,
+    ...empresa
   ])
 ]

@@ -9,5 +9,5 @@ export default (component, path = '') => {
   if (!path) {
     path = crud
   }
-  return `${path}/${component}`
+  return () => import(`${path}/${component}.vue`)
 }

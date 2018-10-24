@@ -1,5 +1,4 @@
 // settings of vendors
-import 'src/vendor/quasar'
 import 'src/vendor/froala'
 import 'src/vendor/fullcalendar'
 import { install } from 'src/vendor/phpzm'

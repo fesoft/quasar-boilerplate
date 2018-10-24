@@ -9,7 +9,7 @@ import categories from 'src/domains/general/category/routes'
 
 /*
  * Configure the property meta with namespace and permission to access control
- * The helper "crud" provided for genesis/infra/router/resources.js has that ability
+ * The helper crud provided for infra/router/resources.js has that ability
  * Example:
  * meta: {
  *   namespace: 'admin.user',

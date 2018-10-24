@@ -32,6 +32,6 @@ export const load = (component) => {
  */
 export const routes = [
   ...auth,
-  ...protect(dashboard),
+  ...dashboard,
   ...error
 ]

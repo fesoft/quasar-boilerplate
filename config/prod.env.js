@@ -10,10 +10,10 @@ module.exports = {
     PERMISSIONS: '"appPermission"'
   },
   API: {
-    PROTOCOL: '"https"',
-    DOMAIN: '"quasar.phpzm.rocks"',
-    PATH: '"/api/v1"',
-    PORT: '""'
+    PROTOCOL: '"http"',
+    DOMAIN: '"192.168.25.40"',
+    PATH: '"/api"',
+    PORT: '"8000"'
   },
   OAUTH: {
     FACEBOOK: '""'

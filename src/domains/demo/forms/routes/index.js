@@ -12,5 +12,11 @@ export default [
     component: 'domains/demo/forms/components/Dynamic',
     meta: meta,
     name: 'dashboard.forms.dynamic'
+  },
+  {
+    path: '/dashboard/grids/dynamic',
+    component: 'domains/demo/grids/components/Dynamic',
+    meta: meta,
+    name: 'dashboard.grids.dynamic'
   }
 ]

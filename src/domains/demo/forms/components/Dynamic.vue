@@ -1,22 +1,24 @@
 <template>
-  <app-card>
-    <div slot="title">
+  <q-page padding>
+  <q-card>
+    <q-card-title>
       <q-icon :name="icon"></q-icon>
       {{ label }}
-    </div>
-    <div slot="content">
-      <br>
+    </q-card-title>
+    <q-card-main>
       <app-form v-bind="{fields, data}" @form~input="input" @form~valid="valid"></app-form>
-      <hr>
-      <app-button :disabled="!ok" color="primary">Dar a Salva</app-button>
-      <hr>
+
       <h6>Debugger</h6>
       <app-debugger v-bind="{label: 'ok', inspect: ok}"></app-debugger>
       <app-debugger v-bind="{label: 'data', inspect: data}"></app-debugger>
       <app-debugger v-bind="{label: 'errors', inspect: errors}"></app-debugger>
       <hr>
-    </div>
-  </app-card>
+    </q-card-main>
+    <q-card-action>
+      <app-button :disabled="!ok" color="primary">Salvar</app-button>
+    </q-card-action>
+  </q-card>
+  </q-page>
 </template>
 
 <script type="text/javascript">
@@ -24,15 +26,17 @@
   import AppCard from 'genesis/components/card/AppCard.vue'
   import AppForm from 'genesis/components/form/AppForm.vue'
   import AppButton from 'genesis/components/button/AppButton.vue'
-
+  
   export default {
     components: {
-      AppCard, AppForm, AppButton
+      AppCard,
+      AppForm,
+      AppButton
     },
     name: 'forms',
     data: () => ({
       icon: 'subtitles',
-      label: 'Form Dinâmico',
+      label: 'Meu formulário',
       ok: false,
       errors: {},
       fields: [
@@ -40,7 +44,7 @@
           component: 'field-text',
           field: 'id',
           label: 'ID',
-          width: 75,
+          width: 50,
           validate: {
             required: true
           }

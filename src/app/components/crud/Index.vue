@@ -1,5 +1,5 @@
 <template>
-  <app-card v-bind="{header: false, style: styles}">
+  <app-card v-bind="{label: $route.meta.label, icon: $route.meta.icon, header: true, style: styles}">
     <router-view slot="content"></router-view>
   </app-card>
 </template>
@@ -13,6 +13,12 @@
     },
     name: 'crud-index',
     props: {
+      label: {
+        default: ''
+      },
+      icon: {
+        default: 'home'
+      },
       classes: {
         default: () => ({})
       },

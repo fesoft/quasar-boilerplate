@@ -1,5 +1,3 @@
-const base = 'app/modules/auth/components'
-
 /**
  * @type Array
  */
@@ -10,7 +8,7 @@ export default [
   },
   {
     path: '/auth',
-    component: base + '/Index',
+    component: 'app/modules/auth/components/Index',
     children: [
       {
         path: '',
@@ -18,7 +16,7 @@ export default [
       },
       {
         path: 'login',
-        component: base + '/Login',
+        component: 'app/modules/auth/components/Login',
         name: 'auth.login'
       }
     ]

@@ -27,9 +27,9 @@ export default ($this) => {
     buttonCreate($this).$validate().$form(['create']),
     buttonUpdate($this).$validate().$form(['edit']),
     buttonSaveAndAdd($this).$validate().$form(['create', 'edit']),
-    buttonSaveAndBack($this).$validate().$form(['create', 'edit']),
-    buttonEditInline($this).$form(['view']),
-    buttonDestroyInline($this).$form(['view', 'edit']),
+    // buttonSaveAndBack($this).$validate().$form(['create', 'edit']),
+    // buttonEditInline($this).$form(['view']),
+    // buttonDestroyInline($this).$form(['view', 'edit']),
 
     // ********************************* general *********************************
 
@@ -38,7 +38,7 @@ export default ($this) => {
 
     // ********************************* last buttons *********************************
 
-    buttonStart($this).$form(),
+    // buttonStart($this).$form(),
     buttonFilter($this).$grid()
   ]
 }
@@ -73,7 +73,7 @@ export const buttonDestroy = $this => button(
  * @returns {Object}
  */
 export const buttonRefresh = $this => button(
-  'refresh', 1, '', read($this, true), 'refresh', 'Recarregar os dados', 'primary'
+  'refresh', 1, '', read($this, true), 'refresh', 'Recarregar', 'primary'
 )
 
 /**
@@ -81,7 +81,7 @@ export const buttonRefresh = $this => button(
  * @returns {Object}
  */
 export const buttonAddInline = $this => button(
-  'add-inline', 2, '', add($this), 'add', 'Inicie a criação de um novo registro', 'primary'
+  'add-inline', 2, '', add($this), 'add', 'Novo', 'primary'
 )
 
 /**
@@ -148,9 +148,14 @@ export const buttonEditInline = $this => button('edit-inline', 3, 'Editar', edit
  * @returns {Object}
  */
 export const buttonDestroyInline = $this => button(
-  'destroy-inline', 4, 'Apagar',
-  destroy($this, 'Confirmação', 'Deseja apagar este registro?', () => $this.browse($this.path)),
-  '', 'Apagar este registro'
+  'destroy-inline',
+  4,
+  'Apagar',
+  destroy($this, 'Confirmação',
+    'Deseja apagar este registro?',
+    () => $this.browse($this.path)),
+    '',
+    'Apagar este registro'
 )
 
 /**

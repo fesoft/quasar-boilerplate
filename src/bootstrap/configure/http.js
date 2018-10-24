@@ -77,7 +77,6 @@ export const httpResponse = (response, cache) => {
   if (response.config.params) {
     url += '?' + serialize(response.config.params)
   }
-
   cache.set(url, response.data, response.config.ttl || ttl)
 
   return response
